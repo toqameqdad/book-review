@@ -45,7 +45,7 @@
            x-transition:enter="transition ease-out duration-1000 delay-400"
            x-transition:enter-start="opacity-0 scale-95"
            x-transition:enter-end="opacity-100 scale-100">
-        <a href ="" class="flex items-center gap-2 px-6 py-2 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg hover:scale-105 transition">
+        <a href ="{{ route('login') }}" class="flex items-center gap-2 px-6 py-2 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-lg hover:scale-105 transition">
           <span>🔑</span> Login
       </a>
         <a href ="{{ route ('books.index') }}" class="flex items-center gap-2 px-6 py-2 rounded-2xl bg-gradient-to-r from-pink-400 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition">

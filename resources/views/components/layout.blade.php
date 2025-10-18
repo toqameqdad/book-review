@@ -30,7 +30,15 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center md:ml-6">
-                        <a href="" class="text-white bg-gradient-to-r from-blue-500 to-indigo-600 px-3 py-2 rounded-lg text-sm font-medium shadow-lg hover:scale-105 transition">Login</a>
+                        @auth
+                            <p class="text-white mr-4"> {{ auth()->user()->name }}</p>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="text-white bg-red-950/60 rounded-md px-3 py-2 text-sm font-medium hover:bg-red-900">Logout</button>
+                        </form>
+                            @else
+                        <a href="{{ route('login') }}" class="text-white bg-indigo-500 rounded-md px-3 py-2 text-sm font-medium hover:bg-indigo-400">Login</a>
+                        @endauth
                     </div>
                 </div>
             </div>
